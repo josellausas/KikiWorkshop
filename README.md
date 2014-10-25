@@ -13,29 +13,12 @@
 - [Jose's Blog](http://josellausas.com)
 
 
-## Hello World
 
-1. Crear folder `KikiLua` 
-2. Crear archivo `main.lua`
-3. Editar `main.lua` con:
 	
-	```
-	local cc = require('llauColors')
-	-- Output a terminal con SublimeText:
-	io.stdout:setvbuf("no")
-	
-	function love.draw()
-		love.graphics.print('Hello World!', 400, 300)
-	end
-	
-	```
-	
-## Correr el programa
+## Configura Sublime
 
-1. Arrastrar el folder de proyecto a Love.exe o Love.app
-2. Configurar Sublime Text 2 (Recomendado)
 
-### Configurar Windows
+### Windows
 
 Pega el código en: `Tools > Build System > New Build System`
 
@@ -52,7 +35,7 @@ _Ojo:_ Si tu windows está en español reemplaza `Program Files/` con `Archivos 
 
 Corre el código con `CTRL + B`
 
-### Configurar Mac/OSX
+### Mac/OSX
 
 Pega el código en: `Tools > Build System > New Build System`
 
@@ -66,4 +49,47 @@ _Ojo:_ Asume que Love.app está en el folder de Applications
 }
 ```
 Corre el código con `CMD + B`
+
+## Hello World
+
+1. Crear folder `KikiLua` 
+2. Crear archivo `main.lua`
+3. Editar `main.lua` con:
+	
+	```
+	function love.draw()
+		love.graphics.print('Hello World!', 400, 300)
+	end
+	
+	```
+	
+## conf.lua
+
+Love utiliza un archivo especial llamado conf.lua.
+
+1. Crea `conf.lua`
+2. Edita el archivo con este codigo:
+
+```
+-- Configura Love
+function love.conf(w)
+	-- Output en Sublime:
+	io.stdout:setvbuf("no")
+	
+	-- El tamaño de la pantalla:
+	w.window.width 	= 1024
+	w.window.height = 768
+	
+	-- Titulo de la ventana
+	w.window.title = "KIKI WORKSHOPS"
+end
+```
+
+## Usando Love2D
+
+- `love.load()`
+- `love.draw()`
+- `love.update()`
+- `love.exit()`
+
 
