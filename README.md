@@ -77,8 +77,8 @@ function love.conf(w)
 	io.stdout:setvbuf("no")
 	
 	-- El tamaño de la pantalla:
-	w.window.width 	= 1024
-	w.window.height = 768
+	w.window.width 	= 800
+	w.window.height = 480
 	
 	-- Titulo de la ventana
 	w.window.title = "KIKI WORKSHOPS"
